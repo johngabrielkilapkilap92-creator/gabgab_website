@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url("back.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: khaki;
+    margin: 0;
+}
+
+main{
+    flex: 1;
+}
+
+header {
+    background-color: #080D24;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+}
+
+.portfolio {
+    color: #38bdf8;
+    font-size: 25px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+.rise {
+    display: none;
+    min-height: 576px;
+    padding: 60px 8%;
+    align-items: center;
+}
+
+#home {
+    display: flex;
+}
+
+.rise:target {
+    display: flex;
+}
+
+body:has(.rise:target) #home:not(:target) {
+    display: none;
+}
+
+.content {
+    max-width: 650px;
+    width: 100%;
+}
+
+.welcome {
+    color: #38bdf8;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+h1 span {
+    color: #38bdf8;
+}
+
+.content h2 {
+    margin-bottom: 15px;
+}
+
+.content p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #cbd5e1;
+    text-align: justify;
+}
+
+.btn {
+    display: inline-block;
+    background: #38bdf8;
+    color: #101827;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: greenyellow;
+    transform: translateY(-3px);
+}
+
+.image-box {
+    height: 350px;
+    width: 350px;
+    margin-left: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.image-box img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    border-radius: 50%;
+    border: 2px solid #38bdf8;
+}
+
+.services {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.service-card {
+    background: #1e293b;
+    padding: 30px;
+    width: 100%;
+    border-radius: 8%;
+    flex: 1;
+    border-bottom: 3px solid #38bdf8;
+    transition: 0.3s;
+}
+
+.photo img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 5%;
+    border: 2px solid #38bdf8;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    background: blueviolet;
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+    color: #38bdf8;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0b1220;
+    color: #94a3b8;
+    font-size: 20px;
+}
+
+/* PARA RESPONSIVE AKONG PORTFOLIO PAG I OPEN SA LAING DEVICE*/
+@media (max-width: 700px) {
+    .rise {
+        scroll-margin-top: 160px;
+    }
+    
+    header {
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 5%;
+        position: sticky;
+        top: 0;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .rise {
+        padding: 40px 6%;
+        min-height: 75vh;
+    }
+
+    #home {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+    #home .welcome{
+        margin-top: 20px;
+        margin-bottom: 0;
+        padding-top: 80px;
+    }
+
+    .rise:target {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+    .image-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0;
+}
+.services {
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+#services .content {
+    width: 100%;
+    text-align: left;
+}
+#services {
+    scroll-margin-top: 160px;
+    padding-top: 60px;
+}
+
+#services .content {
+    width: 100%;
+    text-align: left;
+}
+
+#services .welcome {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-top: 0;
+}
+
+#services h1 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-top: 0;
+}
+}
